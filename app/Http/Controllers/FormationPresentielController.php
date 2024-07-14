@@ -11,10 +11,11 @@ class FormationPresentielController extends Controller
      * Display a listing of the resource.
      */
 
-    public function affichageFormationPresentiel(){
-        $formationPresentiels=FormationPresentiel::all();
-        return $formationPresentiels;
-    }
+     public function getFormationsPresentielWithSessions()
+     {
+         $formationsWithSessions = FormationPresentiel::with('sessionFormation')->get();
+         return response()->json($formationsWithSessions);
+     }
      public function index()
     {
         //

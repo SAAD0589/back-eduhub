@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class FormationPresentiel extends Model
 {
     use HasFactory;
+    public function sessionFormation()
+    {
+        return $this->belongsTo(SessionFormation::class, 'idSessionFormation');
+    }
 }

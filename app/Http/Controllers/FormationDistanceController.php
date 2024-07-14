@@ -10,9 +10,10 @@ class FormationDistanceController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function affichageFormationDistance(){
-        $formationDistances=FormationDistance::all();
-        return $formationDistances;
+    public function getFormationDistancesWithSessions()
+    {
+        $formationDistancesWithSessions = FormationDistance::with('sessionFormation')->get();
+        return response()->json($formationDistancesWithSessions);
     }
     public function index()
     {

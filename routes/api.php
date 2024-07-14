@@ -29,6 +29,6 @@ Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 
 // Affichage FormationDistance
-Route::get('AffichageFormationDistance', [FormationDistanceController::class, 'affichageFormationDistance']);
+Route::get('getFormationDistancesWithSessions', [FormationDistanceController::class, 'getFormationDistancesWithSessions']);
 // Affichage formation Presentiels
-Route::get('AffichageFormationPresentiel', [FormationPresentielController::class, 'affichageFormationPresentiel']);
+Route::get('getFormationsPresentielWithSessions', [FormationPresentielController::class, 'getFormationsPresentielWithSessions']);

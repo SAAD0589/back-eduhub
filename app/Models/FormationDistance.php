@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class FormationDistance extends Model
 {
     use HasFactory;
+    public function sessionFormation()
+    {
+        return $this->belongsTo(SessionFormation::class, 'idSessionFormation');
+    }
 }

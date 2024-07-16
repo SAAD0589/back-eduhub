@@ -19,6 +19,10 @@ return new class extends Migration
             $table->string('duree');
             $table->string('dateDebut');
             $table->string('dateFin');
+            $table->unsignedBigInteger('id_admin');
+            $table->unsignedBigInteger('id_etudiant');
+            $table->foreign('id_admin')->references('id')->on('users');
+            $table->foreign('id_etudiant')->references('id')->on('users');
             $table->timestamps();
         });
     }

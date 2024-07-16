@@ -22,13 +22,14 @@ class User extends Authenticatable
         'prenom',
         'email',
         'password',
+        'role',
         "image",
         "Adresse",
         "NumTelephone",
         "dateDeNaissance",
         "niveauAcademique",
         "filiereAcademique",
-        "Genre"
+        "Genre",
     ];
 
     /**
